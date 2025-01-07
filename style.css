@@ -11,17 +11,6 @@
     --footer-text-color: #fff;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-}
-
-header {
-    background-color: var(--header-bg-color);
-    color: var(--header-text-color);
-}
-
 /* Dark theme */
 body.dark-theme {
     --bg-color: #121212;
@@ -43,113 +32,49 @@ body.dark-theme {
     box-sizing: border-box;
 }
 
-/* Set font and background */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
-/* Navigation menu styles */
 header {
-    background-color: #333;
-    padding: 10px 0;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-}
-
-nav ul li {
-    margin: 0 20px;
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
+    color: var(--header-text-color);
 }
 
 nav ul li a:hover {
-    color: #ff9900;
-}
-
-/* Section styling */
-section {
-    padding: 40px 20px;
-    margin: 20px 0;
+    color: var(--link-hover-color);
 }
 
 section#home {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
+    background-color: var(--link-color);
+    color: var(--header-text-color);
 }
 
 section#about, section#projects, section#contact {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-}
-
-/* Grid Layout for Projects */
-section#projects ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    background-color: var(--section-bg-color);
+    border: 1px solid var(--section-border-color);
 }
 
 section#projects ul li {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border: 1px solid #ddd;
-    text-align: center;
+    background-color: var(--section-bg-color);
+    border: 1px solid var(--section-border-color);
 }
 
 section#projects ul li a {
-    font-size: 18px;
-    color: #007bff;
-    text-decoration: none;
+    color: var(--link-color);
 }
 
 section#projects ul li a:hover {
-    color: #ff9900;
+    color: var(--link-hover-color);
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    section#projects ul {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    section#projects ul {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Footer styling */
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin-bottom: 10px;
-    }
-
-    section {
-        padding: 20px;
-    }
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
 }
