@@ -9,12 +9,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-const themeToggleButton = document.getElementById('theme-toggle');
-themeToggleButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
-    if (document.body.classList.contains('dark-theme')) {
-        themeToggleButton.textContent = 'Switch to Light Theme';
-    } else {
-        themeToggleButton.textContent = 'Switch to Dark Theme';
-    }
+// Function to set the theme based on preference
+function setTheme(theme) {
+    document.body.classList.toggle('dark-theme', theme === 'dark');
+    document.getElementById('theme-toggle').textContent = theme === 'dark' ? 'Switch to Light Theme' : 'Switch to Dark Theme';
+}
+
+// Load theme from localStorage on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    setTheme(currentTheme);
+});
+
+// Toggle theme and save preference
+document.getElementById('theme-toggle').addEventListener('click', () => {
+    const newTheme = document.body.classList.contains('dark-theme') ? 'light' : 'dark';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
 });
