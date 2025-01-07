@@ -1,11 +1,155 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+:root {
+    --bg-color: #f4f4f9;
+    --text-color: #333;
+    --header-bg-color: #333;
+    --header-text-color: #fff;
+    --link-color: #007bff;
+    --link-hover-color: #ff9900;
+    --section-bg-color: #fff;
+    --section-border-color: #ddd;
+    --footer-bg-color: #333;
+    --footer-text-color: #fff;
 }
 
-h1 {
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+}
+
+/* Dark theme */
+body.dark-theme {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --header-bg-color: #1f1f1f;
+    --header-text-color: #e0e0e0;
+    --link-color: #bb86fc;
+    --link-hover-color: #ff9900;
+    --section-bg-color: #222222;
+    --section-border-color: #333;
+    --footer-bg-color: #1f1f1f;
+    --footer-text-color: #e0e0e0;
+}
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set font and background */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
     color: #333;
+}
+
+/* Navigation menu styles */
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #ff9900;
+}
+
+/* Section styling */
+section {
+    padding: 40px 20px;
+    margin: 20px 0;
+}
+
+section#home {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+}
+
+section#about, section#projects, section#contact {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+}
+
+/* Grid Layout for Projects */
+section#projects ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+section#projects ul li {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+section#projects ul li a {
+    font-size: 18px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+section#projects ul li a:hover {
+    color: #ff9900;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    section#projects ul {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    section#projects ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    section {
+        padding: 20px;
+    }
 }
