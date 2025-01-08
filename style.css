@@ -41,16 +41,27 @@ body {
 header {
     background-color: var(--header-bg-color);
     color: var(--header-text-color);
-    margin: 20px;
+    margin: 0; /* Reset margin */
+    padding: 10px; /* Add padding for spacing */
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px; /* Add spacing between list items */
 }
 
 nav ul li a {
     color: var(--header-text-color);
-    margin: 10px;
-}
-
-nav ul li a:hover {
-    color: var(--link-hover-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 section#home {
@@ -60,16 +71,29 @@ section#home {
 
 section#about, section#projects, section#contact {
     background-color: var(--section-bg-color);
-    border: 40px solid var(--section-border-color);
+    border: 1px solid var(--section-border-color); /* Set a visible border */
+    padding: 20px; /* Add padding for content spacing */
+    margin: 20px 0; /* Add margin to separate sections */
+}
+}
+
+section#projects ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
 
 section#projects ul li {
     background-color: var(--section-bg-color);
-    border: 40px solid var(--section-border-color);
+    border: 1px solid var(--section-border-color);
+    padding: 20px;
+    text-align: center;
 }
 
 section#projects ul li a {
     color: var(--link-color);
+    text-decoration: none;
+    font-size: 18px;
 }
 
 section#projects ul li a:hover {
@@ -79,4 +103,6 @@ section#projects ul li a:hover {
 footer {
     background-color: var(--footer-bg-color);
     color: var(--footer-text-color);
+    text-align: center;
+    padding: 10px 0;
 }
