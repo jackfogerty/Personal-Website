@@ -67,6 +67,8 @@ nav ul li a {
 section#home {
     background-color: var(--link-color);
     color: var(--header-text-color);
+    padding: 20px;
+    margin: 20px;
 }
 
 section#about, section#projects, section#contact {
